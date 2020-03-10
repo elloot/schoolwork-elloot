@@ -67,12 +67,19 @@ let desktopQuery = window.matchMedia("(min-width: 992px)");
 
 (() => {
     const skillArray = document.querySelectorAll("#skillTitle");
+    let expanded = false;
 
     skillArray.forEach(function(skill) {
         skill.addEventListener("click", e => {
             if (!desktopQuery.matches) {
                 let temp = e.currentTarget;
-                temp.parentNode.getElementsByTagName("p")[0].classList.toggle("show-skill-info");
+                if (!expanded) {
+                    temp.parentNode.getElementsByTagName("p")[0].style.maxHeight = temp.parentNode.getElementsByTagName("p")[0].scrollHeight + "px";
+                    expanded = true;
+                } else {
+                    temp.parentNode.getElementsByTagName("p")[0].style.maxHeight = "0";
+                    expanded = false;
+                }
                 temp.firstChild.classList.toggle("flip-arrow");
             }
         });
