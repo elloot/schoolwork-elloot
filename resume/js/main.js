@@ -105,9 +105,9 @@ let desktopQuery = window.matchMedia("(min-width: 992px)");
     }
 
     function myFunction(feature, result) {
-        console.log(result);
+        /*console.log(result);
         if (!result) {
             document.querySelector(".card__portrait").setAttribute("src", "img/portrait.jpg");
-        }
+        }*/
     }
 })();
