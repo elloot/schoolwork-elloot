@@ -93,7 +93,7 @@ async function supportsWebp() {
 (async () => {
     if (await supportsWebp()) {
         console.log("does support webp");
-        document.querySelector(".card__portrait").setAttribute("src", "./img/portrait.webp");
+        /*document.querySelector(".card__portrait").setAttribute("src", "./img/portrait.webp");*/
     } else {
         console.log("does not support webp");
     }
