@@ -1,0 +1,90 @@
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 673px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        .navbar__social-links {
+            display: block;
+        }
+    }
+
+    .card__image-wrapper {
+        max-width: 350px !important;
+    }
+}
+
+/*THIS WILL BE THE DESKTOP BREAKPOINT*/
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 96%;
+        max-width: 988px;
+    }
+    .about-me-wrapper {
+        display: flex;
+        align-items: center;
+        .card__image-container {
+            width: inherit;
+        }
+        .text-title-container {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card-wrapper {
+            width: calc(50% - 12px);
+        }
+    }
+    //is it better to nest everything or should I use "!important"?
+    .card-wrapper {
+        padding: 36px;
+        .card__list-skills {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 24px;
+            height: inherit;
+            li {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            .card__skill-wrapper {
+                width: 270px;
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+                .card__skill-title {
+                    font-weight: bold;
+                    cursor: auto;
+                    i {
+                        display: none;
+                    }
+                }
+                .card__skill-info {
+                    margin: 0;
+                    display: block;
+                    max-height: 900px;
+                }
+            }
+        }
+        .card__list-contact {
+            height: 80%;
+            li {
+                margin-top: 0;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+}
