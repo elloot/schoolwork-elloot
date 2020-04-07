@@ -3,9 +3,9 @@ let desktopQuery = window.matchMedia("(min-width: 992px)");
     const button = document.querySelector("#hamburger-toggle");
     const menu = document.querySelector("#menu");
 
-    button.addEventListener("click", e => {
-        menu.classList.toggle("show-menu");
-        button.classList.toggle("hamburger-cross");
+    button.addEventListener("click", (e) => {
+        menu.classList.toggle("menu--show");
+        button.classList.toggle("navbar__hamburger-icon--cross");
     });
 })();
 
@@ -69,8 +69,8 @@ let desktopQuery = window.matchMedia("(min-width: 992px)");
     const skillArray = document.querySelectorAll("#skillTitle");
     let expanded = false;
 
-    skillArray.forEach(function(skill) {
-        skill.addEventListener("click", e => {
+    skillArray.forEach(function (skill) {
+        skill.addEventListener("click", (e) => {
             if (!desktopQuery.matches) {
                 let temp = e.currentTarget;
                 if (!expanded) {
@@ -90,7 +90,7 @@ async function supportsWebp() {
     if (!self.createImageBitmap) return false;
 
     const webpData = "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
-    const blob = await fetch(webpData).then(r => r.blob());
+    const blob = await fetch(webpData).then((r) => r.blob());
     return createImageBitmap(blob).then(
         () => true,
         () => false
